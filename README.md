@@ -18,13 +18,24 @@ agregaríamos.
 Para esto podríamos utilizar dos librerías principales:
   - tkinter / customtkinter (Usaremos la segunda).
   - numpy
+  - heapq
   - y otras librerías que podríamos agregar más adelante
 
 ## Changelog:
 ### Actualización 13/Mayo/2024
-  - Se agregó la base del Frontend (Capturas: https://imgur.com/a/wVB8Qot )
-  - Se agregó las posibles librerías que se usarán en Backend
+  - Se agregó la base del Frontend (Capturas: https://imgur.com/a/wVB8Qot ).
+  - Se agregó las posibles librerías que se usarán en Backend.
 
 ### Actualización 14/Mayo/2024
-  - Se agregó este README.md para lectura/contexto/changelog del proyecto
-  - Se agregó imagenes ilustrativa del frontend (v0.0.1)
+  - Se agregó este README.md para lectura/contexto/changelog del proyecto.
+  - Se agregó imagenes ilustrativa del frontend (v0.0.1).
+
+### Actualización 15/Mayo/2024
+  - Se actualizó el frontend y que llevaría posiblemente (Captura: https://imgur.com/a/4IpaDNQ):
+      * Se eliminó el botón de créditos
+      * Se agregó nuevas entradas de texto
+      * Se agregó 2 textboxes (1 de resultados y 1 de ayuda al usuario)
+  - Se actualizó el backend, que cosas preguntaría y comentarios de lo que llevaría.
+      * Se agregó una nueva librería en el backend y se especifica cual es en el README.md
+  - Se cambió el número de versión del programa frontend (De v0.0.1 pasa a v0.2, esto por el corto tiempo que recibirá actualizaciones el programa)
+  - Se agregó imagenes ilustrativa del frontend (v0.2).
