@@ -3,51 +3,55 @@ import tkinterDnD
 
 ctk.set_ctk_parent_class(tkinterDnD.Tk)
 
-ctk.set_appearance_mode("system") # La apariencia se basa en la del sismtema
-ctk.set_default_color_theme("dark-blue") # Apariencia de botones
+ctk.set_appearance_mode("dark")  #? Modos: "System" (standard), "Dark", "Light"
+ctk.set_default_color_theme("green")  #? Temas: "blue" (standard), "green", "dark-blue"
 
 app = ctk.CTk()
-app.geometry("400*600")
+app.geometry("440x600")
 app.title("Proyecto de Analisis de Algoritmos - Programación Loka")
 
-def buttonCallback():   # Callback del boton de 'Testing'
+print(type(app), isinstance(app, tkinterDnD.Tk))
+
+def buttonCallback():   #! Callback del boton de 'Calcular'
     print('El botón funciona correctamente')
 
-def creditos():
-    cred = ctk.CTk()
-    cred.geometry("400*600")
-    cred.title("Proyecto de Analisis de Algoritmos - Creditos")
+mainFrame = ctk.CTkFrame(master=app)
+mainFrame.pack(pady=20, padx=40, fill="both", expand=True)
 
-    frameCred = ctk.CTkFrame(master = cred)     # Frame de Creditos
-    frameCred.pack(padx=40, pady=20, fill="both", expand=True)
-
-    labelCred = ctk.CTkLabel(text="Creditos", master=frameCred, justify=ctk.LEFT)    # Titulo de Creditos 
-    labelCred.pack(pady=10, padx=10)
-    
-    labelInt1 = ctk.CTkLabel(text="Integrante:", master=frameCred, justify=ctk.LEFT)
-    labelInt1.pack(pady=10, padx=10)
-    textboxCred1 = ctk.CTkTextbox(master=frameCred, height=1)
-    textboxCred1.pack(padx=10)
-    labelInt2 = ctk.CTkLabel(text="Integrante:", master=frameCred, justify=ctk.LEFT)
-    labelInt2.pack(pady=10, padx=10)
-    textboxCred2 = ctk.CTkTextbox(master=frameCred, height=1)
-    textboxCred2.pack(padx=10)
-
-    textboxCred1.insert("0.0", "Alan Marcel Arenas Venegas") # Inserta el texto en cada 'textbox' correspondiente
-    textboxCred2.insert("0.0", "Jose Armando Equihua Antonio")
-
-    cred.mainloop()
-
-frame1 = ctk.CTkFrame(master = app)     # Frame principal
-frame1.pack(padx=40, pady=20, fill="both", expand=True)
-
-label1 = ctk.CTkLabel(text="Vehicle Routing Problem (VRP)", master=frame1, justify=ctk.LEFT)    # Titulo del problema 
+label1 = ctk.CTkLabel(text="Vehicle Routing Problem (VRP)", master=mainFrame, justify=ctk.LEFT)
 label1.pack(pady=10, padx=10)
 
-resBtn = ctk.CTkButton(text="Testing", master=frame1, command=buttonCallback)   # Botón de pruebas #! (ELIMINAR/MODIFICAR DESPUES)
-resBtn.pack(pady=10,padx=10)
+#* Recuadros de entrada
 
-credBtn = ctk.CTkButton(text="Creditos", master=frame1, command=creditos)   # Botón de Creditos
-credBtn.pack(pady=10,padx=10)
+entry1 = ctk.CTkEntry(master=mainFrame, placeholder_text="Coordenada inicial x")
+entry1.pack(pady=10, padx=10)
+
+entry2 = ctk.CTkEntry(master=mainFrame, placeholder_text="Coordenada inicial y")
+entry2.pack(pady=10, padx=10)
+
+entry3 = ctk.CTkEntry(master=mainFrame, placeholder_text="Coordenada final x")
+entry3.pack(pady=10, padx=10)
+
+entry4 = ctk.CTkEntry(master=mainFrame, placeholder_text="Coordenada final y")
+entry4.pack(pady=10, padx=10)
+
+entry5 = ctk.CTkEntry(master=mainFrame, placeholder_text="Método optimo")
+entry5.pack(pady=10, padx=10)
+
+button_1 = ctk.CTkButton(text="Calcular", master=mainFrame, command=buttonCallback)
+button_1.pack(pady=10, padx=10)
+
+#* Textboxes
+
+label2 = ctk.CTkLabel(text="Resultados:", master=mainFrame, justify=ctk.RIGHT)
+label2.pack(pady=10, padx=10)
+txtBxRes = ctk.CTkTextbox(master=mainFrame, height=1) #* Textbox de los resultados
+txtBxRes.pack(padx=10)
+
+label3 = ctk.CTkLabel(text="Ayuda:", master=mainFrame, justify=ctk.RIGHT)
+label3.pack(pady=10, padx=10)
+txtBxHelp = ctk.CTkTextbox(master=mainFrame, height=80, width=500) #* Textbox de ayuda al usuario
+txtBxHelp.pack(padx=10)
+txtBxHelp.insert("0.0", "Al ingresal los datos de 'optimización', ingrese algunas de estas opciones: 'distancia' o 'tiempo'")
 
 app.mainloop()
