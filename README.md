@@ -28,14 +28,19 @@ Para esto podríamos utilizar dos librerías principales:
 
 ### Actualización 14/Mayo/2024
   - Se agregó este README.md para lectura/contexto/changelog del proyecto.
-  - Se agregó imagenes ilustrativa del frontend (v0.0.1).
+  - Se agregó imagenes ilustrativa del Frontend (v0.0.1).
 
 ### Actualización 15/Mayo/2024
-  - Se actualizó el frontend y que llevaría posiblemente (Captura: https://imgur.com/a/4IpaDNQ):
+  - Se actualizó el Frontend y que llevaría posiblemente (Captura: https://imgur.com/a/4IpaDNQ):
       * Se eliminó el botón de créditos
       * Se agregó nuevas entradas de texto
       * Se agregó 2 textboxes (1 de resultados y 1 de ayuda al usuario)
-  - Se actualizó el backend, que cosas preguntaría y comentarios de lo que llevaría.
-      * Se agregó una nueva librería en el backend y se especifica cual es en el README.md
-  - Se cambió el número de versión del programa frontend (De v0.0.1 pasa a v0.2, esto por el corto tiempo que recibirá actualizaciones el programa)
-  - Se agregó imagenes ilustrativa del frontend (v0.2).
+  - Se actualizó el Backend, que cosas preguntaría y comentarios de lo que llevaría.
+      * Se agregó una nueva librería en el Backend y se especifica cual es en el README.md
+  - Se cambió el número de versión del programa Frontend (De v0.0.1 pasa a v0.2, esto por el corto tiempo que recibirá actualizaciones el programa)
+  - Se agregó imagenes ilustrativa del Frontend (v0.2).
+
+### Actualización 18/Mayo/2024
+  - Se introduce una clase (versión de prueba) para los grafos en el Backend
+  - Se agregaron los significados que tendrán los comentarios dinámicos en el código (Instalar BetterComments en VisualStudioCode para ver los cambios)
+  - Se renombró la librería heapd para completar el código más rápido (Para desarrolladores)
