@@ -21,6 +21,10 @@ Para esto podríamos utilizar dos librerías principales:
   - heapq
   - y otras librerías que podríamos agregar más adelante
 
+## Cronograma:
+
+Link: https://imgur.com/a/nLNSz80
+
 ## Changelog:
 ### Actualización 13/Mayo/2024
   - Se agregó la base del Frontend (Capturas: https://imgur.com/a/wVB8Qot ).
@@ -44,3 +48,6 @@ Para esto podríamos utilizar dos librerías principales:
   - Se introduce una clase (versión de prueba) para los grafos en el Backend
   - Se agregaron los significados que tendrán los comentarios dinámicos en el código (Instalar BetterComments en VisualStudioCode para ver los cambios)
   - Se renombró la librería heapd para completar el código más rápido (Para desarrolladores)
+
+### Actualización 20/Mayo/2024 (COMMIT 1)
+  - Se completó la parte del Backend. (Ver 'backend.py')
