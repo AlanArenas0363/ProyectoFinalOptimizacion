@@ -27,11 +27,11 @@ Para esto podríamos utilizar dos librerías principales:
 
 #### Instalación de las librerías:
 Para poder instalar correctamente las librerías, debe de ingresar estos comandos al CMD o Terminal de su sistema operativo:
-'''
+```
     pip install numpy
     pip install customtkinter
     pip install tkinterDnD
-'''
+```
 Una vez instalada, reinicie el IDE que está usando y vuelvalo a ejecutar.
 
 ## Cronograma:
