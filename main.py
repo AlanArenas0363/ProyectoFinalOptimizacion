@@ -41,12 +41,15 @@ class Graph:
         return dist
 
 app = ctk.CTk()
-app.geometry("440x600")
-app.title("Proyecto de Analisis de Algoritmos v0.5 - Programación Loka")
+app.geometry("440x640")
+app.title("Proyecto de Analisis de Algoritmos v0.6 - Programación Loka")
 
 print(type(app), isinstance(app, tkdnd.Tk))
 
 def buttonCallback():
+    #? Borra la respuesta anterior para nuevos datos
+    txtBxRes.delete(0.0, 'end')
+
     #? Capturas de información de las entradas de texto
     xInicio = float(entry1.get())
     yInicio = float(entry2.get())
@@ -64,18 +67,33 @@ def buttonCallback():
 
     #? Añadir los resultados al recuadro correspondiente
     if opti == 1:
-        print("La distancia mínimo entre los puntos es: ", distCorta[1], "mts")
+        #* Si gusta ver la respuesta tanto en la interfaz, como en la terminal. Quite el '#' del print.
+        #print("La distancia mínimo entre los puntos es: ", distCorta[1], "mts")
         txtBxRes.insert("0.0", str(distCorta[1]), "mts")
 
     elif opti == 2:
         tiempo = distCorta[1] / 60 #*Supongamos que va a 60km/hr
-        print("El tiempo minimo es de: ", tiempo, "hrs")
+        #* Si gusta ver la respuesta tanto en la interfaz, como en la terminal. Quite el '#' del print.
+        #print("El tiempo minimo es de: ", tiempo, "hrs")
         txtBxRes.insert("0.0", str(tiempo), "hrs")
 
     else:
         txtBxRes.insert("0.0", "Errror al mostrar resultado")
 
-    print('El botón funciona correctamente')
+#? Borra todos los datos ingresados de todos los texboxes disponibles
+def borrarDatos():
+    entry1.configure(state="normal")
+    entry2.configure(state="normal")
+    entry3.configure(state="normal")
+    entry4.configure(state="normal")
+    entry5.configure(state="normal")
+
+    entry1.delete(0, 'end')
+    entry2.delete(0, 'end')
+    entry3.delete(0, 'end')
+    entry4.delete(0, 'end')
+    entry5.delete(0, 'end')
+    txtBxRes.delete(0.0, 'end')
 
 mainFrame = ctk.CTkFrame(master=app)
 mainFrame.pack(pady=20, padx=40, fill="both", expand=True)
@@ -100,15 +118,19 @@ entry4.pack(pady=10, padx=10)
 entry5 = ctk.CTkEntry(master=mainFrame, placeholder_text="Método optimo")
 entry5.pack(pady=10, padx=10)
 
-button_1 = ctk.CTkButton(text="Calcular", master=mainFrame, command=buttonCallback)
-button_1.pack(pady=10, padx=10)
+btnRes = ctk.CTkButton(text="Calcular", master=mainFrame, command=buttonCallback)
+btnRes.pack(pady=10, padx=10)
 
-#* Textboxes
+#? Textboxes
 
 label2 = ctk.CTkLabel(text="Resultados:", master=mainFrame, justify=ctk.RIGHT)
 label2.pack(pady=10, padx=10)
 txtBxRes = ctk.CTkTextbox(master=mainFrame, height=1) #* Textbox de los resultados
 txtBxRes.pack(padx=10)
+
+#? Boton para borrar todo el contenido
+btnErrase = ctk.CTkButton(text="Borra el contenido", master=mainFrame, command=borrarDatos)
+btnErrase.pack(padx=10, pady=10)
 
 label3 = ctk.CTkLabel(text="Ayuda:", master=mainFrame, justify=ctk.RIGHT)
 label3.pack(pady=10, padx=10)
