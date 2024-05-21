@@ -15,11 +15,24 @@ En el lenguaje Python, haremos un programa con interfaz, en la parte de la inter
 (Se pueden utilizar otras más maneras). Despues preguntaría que sería más eficiente para el usuario (Tiempo, distancia, costo) entre otras cosas más que posiblemente
 agregaríamos.
 
+#### ¿Que es el Dijkstra?
+Es un método utilizado para encontrar el camino más corto desde un nodo de inicio a todos los demás nodos en un grafo con pesos no negativos. Funciona manteniendo una
+lista de los nodos cuyas distancias más cortas desde el nodo de inicio ya se han determinado y actualizando estas distancias a medida que explora los nodos adyacentes. 
+
 Para esto podríamos utilizar dos librerías principales:
   - tkinter / customtkinter (Usaremos la segunda).
   - numpy
   - heapq
   - y otras librerías que podríamos agregar más adelante
+
+#### Instalación de las librerías:
+Para poder instalar correctamente las librerías, debe de ingresar estos comandos al CMD o Terminal de su sistema operativo:
+'''
+    pip install numpy
+    pip install customtkinter
+    pip install tkinterDnD
+'''
+Una vez instalada, reinicie el IDE que está usando y vuelvalo a ejecutar.
 
 ## Cronograma:
 
@@ -51,3 +64,10 @@ Link: https://imgur.com/a/nLNSz80
 
 ### Actualización 20/Mayo/2024 (COMMIT 1)
   - Se completó la parte del Backend. (Ver 'backend.py')
+
+### Actualización 20/Mayo/2024 (COMMIT 2)
+  - Se subió el codigo principal en la cual es la fusión del Frontend y Backend (v0.5). Se puede modificar luego, para agregar otro metodo de resolver el problema
+    final (Ver 'main.py') (Capturas: https://imgur.com/a/6s5TinG)
+      * Se modificó el ingreso de texto en el apartado de 'Metodo optimo' a números (Esto es una version de prueba, puede cambiar a futuras actualizaciones)
+  - Se agregó como se puede instalar las librerías necesarias en el README.md (Este documento)
+  - Se agregó la definición del método Dijkstra en el README.md (Este documento)
