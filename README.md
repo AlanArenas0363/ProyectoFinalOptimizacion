@@ -23,7 +23,7 @@ Para esto podríamos utilizar dos librerías principales:
   - tkinter / customtkinter (Usaremos la segunda).
   - numpy
   - heapq
-  - y otras librerías que podríamos agregar más adelante
+  - tkinterDnD (Librería de apoyo)
 
 #### Instalación de las librerías:
 Para poder instalar correctamente las librerías, debe de ingresar estos comandos al CMD o Terminal de su sistema operativo:
@@ -34,7 +34,24 @@ Para poder instalar correctamente las librerías, debe de ingresar estos comando
 ```
 Una vez instalada, reinicie el IDE que está usando y vuelvalo a ejecutar.
 
+## ¿Como podríamos mejorar este proyecto?
+Ya que hemos terminado el proyecto, aún nos podríamos hacer la pregunta de como se podría mejorar aún más este pequelo programa. Esto con el fin de no perder práctica
+en el ámbito de la programación, así que se hizo esta pequeña lista de lo que podríamos hacer y una breve explicación del por qué podríamos hacer este cambio.
+  - Datos personalizados en velocidad:
+      Esto sería importante poderlo arreglar, ya que el programa en sí te propone la velocidad constante de 60km/hr. Entonces, sería mejor poderle dar la posibilidad de que el
+      usuario cambie ese valor, sin tener que modificar el valor desde el archivo fuente.
+    
+  - Capacidad de leer archivos ajenos (.cvs):
+      Esta parte sería interesante, tener un pequeño menú en la cual pueda cargar cualquier archivo con esta extensión y así acomodar los datos de manera automática sin tener que
+      escribirlos cada vez que se necesite.
+    
+  - Archivo ejecutable:
+      Esto sería interesante también, ya que puede ser algo tedioso tener que instalar una librería solamente para utilizar el programa pocas veces, así que para ahorrarnos tiempo, sería
+      mejor que sería un ejecutable, para así nada más correr el archivo y poderlo utilizar sin problemas. 
+
 ## Cronograma:
+
+![l0fL2uP](https://github.com/AlanArenas0363/ProyectoFinalOptimizacion/assets/159272184/10d601ad-1e0a-4170-b8cb-7d3806874389)
 
 Link: https://imgur.com/a/nLNSz80
 
@@ -71,3 +88,15 @@ Link: https://imgur.com/a/nLNSz80
       * Se modificó el ingreso de texto en el apartado de 'Metodo optimo' a números (Esto es una version de prueba, puede cambiar a futuras actualizaciones)
   - Se agregó como se puede instalar las librerías necesarias en el README.md (Este documento)
   - Se agregó la definición del método Dijkstra en el README.md (Este documento)
+
+### Actualización 21/Mayo/2024
+  - Bugfixes menores al código principal (v0.6):
+      * Se arregló el bug que se amontonaba el resultado si cambiabas las coordenadas y/o cambiabas el metodo optimo a resolver sin tener que reiniciar el
+        código (Capturas: https://imgur.com/a/HJxRnuL)
+      * Se eliminó el feedback cuando apretabas el botón de Calcular (Este botón funciona correctamente)
+      * Se ocultó los resultados del problema ubicados en la terminal (Si desea reactivarlos, quite el '#' antes de su print correspondiente)
+  - Implementado un nuevo botón:
+      * Se agregó un nuevo botón, en la cual borra todos los valores/texto que se encuentran en los recuadros de:
+          - X Inicial, Y Inicial, X Final, Y Final, Método Optimo y Resultado
+  - Se agregó el apartado de '¿Como podríamos mejorar este proyecto?' en el README.md (Este documento)
+  - Se agregó una librería que se utilizó en el programa final en el README.md (Este documento)
